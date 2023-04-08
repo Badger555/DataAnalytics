@@ -4,13 +4,13 @@ data{
 }
 
 parameters{
-    real<lower=0> mu;
+    real mu;
     real<lower=0> sigma;
 }
 
 model{
-    mu ~ normal(175,15);
-    sigma ~ exponential(0.5);
+    mu ~ normal(155,8);
+    sigma ~ exponential(0.15);
     heights ~ normal(mu, sigma);
 }
 
